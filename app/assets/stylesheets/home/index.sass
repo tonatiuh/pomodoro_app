@@ -1,0 +1,41 @@
+.pomodoro-row
+  margin-top: 2em !important
+
+  .activity
+    margin-top: 1em
+
+  .pomodoro-container
+    float: left
+    margin-left: 1em
+
+  .interruptions
+    overflow: auto
+
+    .interruption
+      float: left
+      height: 1em
+
+  .internal-interruptions, .external-interruptions
+    display: table
+    margin: 0 auto
+
+  .internal-interruptions .interruption:before
+    content: ' \27'
+    font-size: 20px
+
+  .external-interruptions .interruption:before
+    content: ' \002D'
+    font-size: 20px
+
+  .pomodoro-mark
+    clear: left
+    height: 5px
+    text-align: center
+    width: 100%
+
+    &:before
+      content: ' \25CF'
+      font-size: 20px
+
+#pomodoro-btn-container, #interruption-btn-container
+  text-align: right

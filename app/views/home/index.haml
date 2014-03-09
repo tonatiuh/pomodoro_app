@@ -1,0 +1,60 @@
+.row.top-space
+
+  .six.columns
+    %h2 TO DO TODAY
+  .six.columns
+    %h2 MARCH 12 OF 2014
+
+.row.pomodoro-row
+
+  .activity.eight.columns
+    %h5 Something (max 6)
+
+  .four.columns
+    .pomodoro-container
+      .interruptions
+        .internal-interruptions
+          .interruption
+        .external-interruptions
+      .pomodoro-mark
+
+.row.pomodoro-row
+  .twelve.columns
+
+  %form
+    .row
+      %fieldset
+        %legend New Activity
+        %ul
+          %li.field
+            %label.inline Activity
+            %input.xwide.text.input
+          %li.field
+            %label.inline{for: "text2"} Estimation (pomodoros)
+            .picker
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+                %option 6
+                %option 7
+                %option 8
+          .pretty.medium.primary.btn
+            %a(href='') Save
+
+
+.row.top-space
+  .six.columns
+    .pretty.medium.primary.btn
+      %a(href='') Add activity
+
+  .six.columns#pomodoro-btn-container
+    .pretty.medium.secondary.btn
+      %a(href='') Track pomodoro
+
+.row.top-space
+  .push_ten.two.columns#interruption-btn-container
+    .pretty.medium.warning.small.btn
+      %a(href='') Track interruption
