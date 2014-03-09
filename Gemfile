@@ -16,13 +16,18 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'guard-rspec', require: false
+end
+
 group :development, :test do
   gem 'pry-rails'
 end
 
 group :test do
-  gem 'rspec'
-  gem 'guard'
+  gem 'rspec-rails'
   gem 'fabrication'
   gem 'capybara'
   gem 'launchy'
