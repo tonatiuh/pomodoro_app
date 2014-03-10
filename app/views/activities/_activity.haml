@@ -1,0 +1,18 @@
+.row.pomodoro-row
+
+  .activity.eight.columns
+    %h5= "#{activity.title} (max #{activity.estimation})"
+
+  .four.columns
+    .pomodoro-container
+      .interruptions
+        .internal-interruptions
+
+          - if activity.interruptions
+            = for i in 0..activity.interruptions do
+              .interruption
+        .external-interruptions
+
+      - if activity.pomodoros
+        = for i in 0..activity.pomodoros do
+          .pomodoro-mark

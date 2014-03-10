@@ -1,5 +1,5 @@
 PomodoroApp::Application.routes.draw do
-  root 'home#index'
+  root 'activities#index'
 
   resources :activities, only: :create
 end

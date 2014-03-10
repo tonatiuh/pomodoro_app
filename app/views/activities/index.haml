@@ -1,0 +1,19 @@
+.row.spaced
+
+  .six.columns
+    %h2 TO DO TODAY
+  .six.columns#current-date
+    %h2= @time.strftime("%b #{@time.day.ordinalize} of %Y")
+
+= render @activities
+
+.row.spaced
+  .twelve.columns
+    = render partial: 'new_activity'
+
+.row.spaced
+  .six.columns
+    .pretty.medium.primary.btn
+      %a(href='') Add activity
+
+.vertical-spacer

@@ -1,0 +1,19 @@
+= form_for Activity.new do |f|
+  .row
+
+    %fieldset
+      %legend New Activity
+
+      %ul
+        %li.field
+
+          = f.label :title, class: 'inline'
+          = f.text_field :title, class: 'xwide text input'
+
+        %li.field
+          = f.label :estimation, 'Estimation (pomodoros)', class: 'inline'
+          .picker
+            = f.select :estimation, Activity::POMODORO_OPTIONS
+
+        .pretty.medium.primary.btn
+          = f.submit 'Save'

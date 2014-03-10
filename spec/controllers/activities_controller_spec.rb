@@ -1,5 +1,16 @@
 require 'spec_helper'
 
+
+describe ActivitiesController, '#index' do
+  it 'assigns activities' do
+    Fabricate :activity
+    get :index
+
+    expect(assigns(:activities)).to eq(Activity.all)
+  end
+end
+
+
 describe ActivitiesController, '#create' do
   before { post :create, activity: Fabricate.to_params(:activity) }
 
