@@ -5,6 +5,7 @@ Feature: activity creation
 
   Scenario: Create an activity
     Given I'm in the root path
+    And I click the button for adding an activity
     And I set a title 'my activity x'
     And I estimate it to 5 pomodoros
     And I save the activity

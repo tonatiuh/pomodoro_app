@@ -1,3 +1,7 @@
+Given(/^I click the button for adding an activity$/) do
+  click_link 'Add activity'
+end
+
 Given(/^I set a title 'my activity x'$/) do
   @activity = Fabricate.build :activity
   fill_in 'Title', with: @activity.title
