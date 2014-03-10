@@ -9,8 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'modernizr-rails'
-gem 'gumby-framework'
 gem 'haml'
+gem 'bootstrap-sass', '~> 3.1.1'
 
 group :doc do
   gem 'sdoc', require: false

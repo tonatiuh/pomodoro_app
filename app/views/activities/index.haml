@@ -1,19 +1,25 @@
-.row.spaced
+.container
 
-  .six.columns
-    %h2 TO DO TODAY
-  .six.columns#current-date
-    %h2= @time.strftime("%b #{@time.day.ordinalize} of %Y")
+  .row
+    .col-md-6
+      %h2 TO DO TODAY
+    .col-md-6#current-date
+      %h2= @time.strftime("%b #{@time.day.ordinalize} of %Y")
 
-= render @activities
 
-.row.spaced
-  .twelve.columns
+  %table.table.vertical-spaced
+    %tr
+      %th
+        Activity
+      %th
+        Pomodoros
+
+    = render @activities
+
+  .row
     = render partial: 'new_activity'
 
-.row.spaced
-  .six.columns
-    .pretty.medium.primary.btn
-      %a(id='fn-add-activity' href='') Add activity
+  .row.vertical-spaced
+    %button.btn.btn-primary(id='fn-add-activity') Add activity
 
 .vertical-spacer

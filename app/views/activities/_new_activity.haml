@@ -1,19 +1,16 @@
-= form_for Activity.new, html: { id: 'fn-new-activity-form' } do |f|
-  .row
+= form_for Activity.new, html: { class: 'form-horizontal vertical-spaced', role: 'form' } do |f|
+  #fn-new-activity-form
 
-    %fieldset
-      %legend New Activity
+    .form-group
+      = f.label :title, class: 'col-sm-2 control-label'
+      .col-sm-10
+        = f.text_field :title, class: 'form-control', placeholder: 'title'
 
-      %ul
-        %li.field
+    .form-group
+      = f.label :estimation, 'Estimation (pomodoros)', class: 'col-sm-2 control-label'
+      .col-sm-1
+        = f.select :estimation, Activity::POMODORO_OPTIONS, {}, { class: 'form-control' }
 
-          = f.label :title, class: 'inline'
-          = f.text_field :title, class: 'xwide text input'
-
-        %li.field
-          = f.label :estimation, 'Estimation (pomodoros)', class: 'inline'
-          .picker
-            = f.select :estimation, Activity::POMODORO_OPTIONS
-
-        .pretty.medium.primary.btn
-          = f.submit 'Save'
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        = f.submit 'Save', class: 'btn btn-primary'

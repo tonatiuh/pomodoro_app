@@ -3,7 +3,7 @@ Feature: activity creation
   As the default user
   I want to create an activity
 
-  Scenario: Create an activity
+  Scenario: create an activity
     Given I'm in the root path
     And I click the button for adding an activity
     And I set a title 'my activity x'

@@ -28,6 +28,8 @@ GEM
     addressable (2.3.5)
     arel (4.0.2)
     atomic (1.1.15)
+    bootstrap-sass (3.1.1.0)
+      sass (~> 3.2)
     builder (3.1.4)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -82,9 +84,6 @@ GEM
     guard-rspec (4.2.8)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
-    gumby-framework (0.0.1)
-      jquery-rails
-      modernizr-rails
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -207,6 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.1.1)
   capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails
@@ -216,7 +216,6 @@ DEPENDENCIES
   guard
   guard-cucumber
   guard-rspec
-  gumby-framework
   haml
   jbuilder (~> 1.2)
   jquery-rails
