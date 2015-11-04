@@ -14,10 +14,12 @@
 ActiveRecord::Schema.define(version: 20140309175430) do
 
   create_table "activities", force: true do |t|
-    t.string  "title"
-    t.integer "estimation"
-    t.integer "pomodoros"
-    t.integer "interruptions"
+    t.string   "title"
+    t.integer  "estimation"
+    t.integer  "pomodoros"
+    t.integer  "interruptions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

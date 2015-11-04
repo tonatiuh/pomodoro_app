@@ -1,5 +1,4 @@
 class ActivitiesController < ApplicationController
-
   def index
     @time       = Time.new
     @activities = Activity.all
@@ -10,9 +9,14 @@ class ActivitiesController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    Activity.find(params[:id]).delete
+    redirect_to root_path
+  end
+
   private
 
-    def activity_params
-      params.require(:activity).permit(:title, :estimation)
-    end
+  def activity_params
+    params.require(:activity).permit(:title, :estimation)
+  end
 end

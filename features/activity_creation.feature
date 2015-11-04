@@ -4,9 +4,10 @@ Feature: activity creation
   I want to create an activity
 
   Scenario: create an activity
-    Given I'm in the root path
-    And I click the button for adding an activity
-    And I set a title 'my activity x'
-    And I estimate it to 5 pomodoros
-    And I save the activity
-    Then I see the activity listed
+    Given I visit the "root" path
+    When  I click on "Add activity"
+    And   I fillin "activity title" with "foo activity"
+    And   I estimate to "5" pomodoros
+    And   I click on "Save"
+    And   I visit the "root" path
+    Then  I see "foo activity"
